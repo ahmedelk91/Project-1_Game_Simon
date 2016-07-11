@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ahmed Elkheshin | Project 1 - Simon </title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"> </script>
+  <script src="script.js"> </script>
+</head>
+<!--                                -->
+<body>
+  <header>
+    <h1>SIMON | THE GAME OF CHAMPIONS</h1>
+  </header>
+<!--                                -->
+<div class="clearfix">
+
+  <div id="leftInstructions">
+    <p> Instructions <p>
+      <hr>
+        <p id="instructions"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat temporibus sequi cum, fuga nemo consequuntur in culpa magnam necessitatibus eius ut laborum alias, aliquam ullam impedit deserunt vel, corporis commodi!</p>
+  </div>
+
+    <div class="board">
+      <div id="red"> RED </div>
+      <div id="blue">BLUE</div>
+
+      <div id="button">START</div>
+
+      <div id="yellow">YELLOW</div>
+      <div id="green">GREEN</div>
+    </div>
+
+  <!-- <aside id="rightScore">
+      <div> 0 </div>
+    </div>
+  </aside> -->
+
+</div>
+  <!--                              -->
+
+    <footer> Made with &hearts; by <a href="#"> Ahmed Elkhesin </a>
+    </footer>
+
+  </body>
+  </html>
+
+  <!-- User Story
+
+  As a user:
+  -I want to have a title displayed so I know what game I am   playing.
+  -I want to have the instructions laid out on the same page so I know how to play.
+  -I want to click a start button so the sequence begins.
+  -I want the game to generate random sequences so I can mimick them.
+  -I want the sequences to increase in speed and difficulty after every input so I can be challenged.
+  -I want to click the circles so that it lights up.
+  -I want my click patterns to be recorded so that another sequence can follow.
+  -I want to see my score after each sequence so I know how I am doing in real time.
+  -I want the game to restart if I mess up a sequence so I can play again.
+  -I want my score to be recorded so I can compare it to previous scores.
+
+  Code Story
+  -The page loads
+  -Title, Instructions, a start button, and 4 circle Divs appear
+  -.on("click", function(evt){
+  *TBD*
+} the start button is pressed, the divs will light up in a sequence.
+-The game will start off with begginer level difficulty.
+-After the sequence is initiated
+setInterval(change color on random div, every 2 seconds){
+*TBD*
+}
+,prompt(a message will appear saying "Your Turn")
+-The player will click the divs that match the the light sequence. .on(click, match sequence)
+-If the player is succesful in matching the light sequence, the game will generate another random sequence at an increased speed and complexity. for(i=0,i<10,i++)
+-If the player enters an incorrect sequence, the game will end and a score will be recorded.
+if (sequence === comupter sequence) {
+continue sequence with higher frequency and complexity
+} else {
+prompt.("YOU LOSE!")
+});
+-The game will reload.
