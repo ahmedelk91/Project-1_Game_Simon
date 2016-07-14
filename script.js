@@ -233,7 +233,7 @@ $(document).ready(function(){
           addNumToArray();
         }
       } else {
-        alert("YOU SUCK YOU GODDAMN LOSER! YOU CAN'T EVEN FOLLOW A SIMPLE PATTERN? WHAT AN IDIOT!!!")
+        alert("THANKS A LOT, LOSER! HUMANITY IS DOOMED!")
       }
     }
 

@@ -2,6 +2,11 @@ body {
   background-color: gray;
 }
 
+@font-face {
+  font-family: "Russo One";
+  src: url("https://fonts.googleapis.com/css?family=Russo+One")
+}
+
 header {
   display:inline-block;
   align-items: center;
@@ -11,17 +16,17 @@ header {
   /*border: 2px solid black;*/
   color: yellow;
   /*background-color: black;*/
-  font-family: Impact;
+  font-family: "Russo One";
   font-size: 30px;
 }
 
-header h1, h3{
+header h1, h2{
   margin:0 auto;
 }
 
-header h3 {
-  font-size: 17px;
-  font-family: Verdana;
+header h2 {
+  font-size: 19px;
+  font-family: "Russo One";
 }
 
 #red {
@@ -33,7 +38,7 @@ header h3 {
   background-color: red;
   text-align:center;
   line-height: 200px;
-  font-size: 40px;
+  font-size: 120px;
   font-weight: bold;
   color:white;
   justify-content:center;
@@ -47,7 +52,7 @@ header h3 {
   background-color: blue;
   text-align:center;
   line-height: 200px;
-  font-size: 40px;
+  font-size: 120px;
   font-weight: bold;
   color:white;
   justify-content:center;
@@ -61,7 +66,7 @@ header h3 {
   line-height: 200px;
   border-radius: 50%;
   background-color: yellow;
-  font-size: 40px;
+  font-size: 120px;
   font-weight: bold;
   color:black;
 }
@@ -74,13 +79,14 @@ header h3 {
   background-color: green;
   text-align:center;
   line-height: 200px;
-  font-size: 40px;
+  font-size: 120px;
   font-weight: bold;
   color:white;
 }
 
 footer {
   display: inline-block;
+  font-family: "Russo One";
   text-align: center;
   height: 100px;
   width: 100%;
@@ -88,7 +94,15 @@ footer {
   color: yellow;
   background-color: black;
   font-size: 24px;
+}
+
+a {
   text-decoration:none;
+  color:yellow;
+}
+
+a:hover{
+  color:blue;
 }
 
 .board {
@@ -111,8 +125,9 @@ footer {
 }
 
 div p {
-  font-size: 50px;
-  color: white;
+  font-size: 40px;
+  font-family: "Russo One";
+  color: yellow;
   text-align: center;
   font-weight: bold;
 }
@@ -149,7 +164,8 @@ column-gap: 1em;
 
 #button {
     font-size: 20px;
-    height: 25px;
+    font-family: "Russo One";
+    height: 20px;
     width: 60px;
     border:black solid;
     border-radius: 15%;
@@ -159,6 +175,10 @@ column-gap: 1em;
     font-weight: bold;
     padding: 35px;
     color: yellow;
+}
+
+#button:hover{
+  opacity: 0.8;
 }
 
 #instructions {
@@ -175,5 +195,9 @@ column-gap: 1em;
   font-size: 18px;
   text-align: left;
   color:yellow;
-  font-family: Verdana;
+  font-family: "Russo One";
+}
+
+.action:hover {
+  opacity: 0.8;
 }
