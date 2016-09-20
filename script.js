@@ -37,99 +37,114 @@ $(document).ready(function(){
   }
   //
   // function setInterval(thingToAnimate) {
-    // for (i=0;i<simonMoves.length;i++)
+  // for (i=0;i<simonMoves.length;i++)
 
   function lightUp(thingToAnimate, delay) {
-        setTimeout(function() {
-          console.log("flash");
-          console.log(simonMoves[i]);
-          thingToAnimate.fadeOut().fadeIn();
-          // find out a way to test whether a color has been passed through the function
-        }, 1500 + (delay*2000));
-        console.log('aaa');
-      }
-      //setting variable timeouts with loops
-    // function flashBetween(thingToAnimate){
-    //   setInterval(thingToAnimate);
-    // };
+    setTimeout(function() {
+      console.log("flash");
+      console.log(simonMoves[i]);
+      thingToAnimate.fadeOut().fadeIn();
+      // find out a way to test whether a color has been passed through the function
+    }, 1500 + (delay*2000));
+    console.log('aaa');
+  }
+  //setting variable timeouts with loops
+  // function flashBetween(thingToAnimate){
+  //   setInterval(thingToAnimate);
+  // };
 
 
 
-    //start button; when clicked, starts a function that addNumToArray
-    $("#button").on("click", function(evt){
-      evt.preventDefault();
+  //start button; when clicked, starts a function that addNumToArray
+  $("#button").on("click", function(evt){
+    evt.preventDefault();
+    addNumToArray();
+  });
+
+  //turns off the start button so it only needs to be started once
+  function turnOffStart(){
+    $("#button").off("click");
+  };
+  //////////////////////////////////////////////////////////////////////////////
+  function userMoves(playerChoices){
+    this.playerChoices= ""
+    this.addPlayerChoices=(playerChoices)
+  }
+  userMoves.prototype = {
+    addPlayerChoices: function(playerChoices){
+      this.playerChoices = addPlayerChoices;
+    },
+  }
+
+    var playerChoices = ["#red", "#blue", "#yellow", "#green"]
+
+
+////////////////////////////////////////////////////////////////////////////////
+//player choice buttons - function pushes click data to userMoves array
+$("#red").on("click", function() {
+  console.log("Red works")
+  userMoves.push(colors[0])
+  console.log("Simon Array : "+simonMoves)
+  console.log("User Array : " +userMoves)
+  //animates the button the player clicks on
+  $(this).fadeOut("slow").fadeIn("slow");
+  //calls the checkWinner function which evaluates whether or not the player action matches the simon action
+  checkWinner(userMoves, simonMoves)
+})
+$("#blue").on("click", function() {
+  userMoves.push(colors[1])
+  console.log("Simon Array : "+simonMoves)
+  console.log("User Array : " +userMoves)
+  $(this).fadeOut("slow").fadeIn("slow");
+  checkWinner(userMoves, simonMoves)
+})
+$("#yellow").on("click", function() {
+  userMoves.push(colors[2])
+  console.log("Simon Array : "+simonMoves)
+  console.log("User Array : " +userMoves)
+  $(this).fadeOut("slow").fadeIn("slow");
+  checkWinner(userMoves, simonMoves)
+})
+$("#green").on("click", function() {
+  userMoves.push(colors[3])
+  console.log("Simon Array : "+simonMoves)
+  console.log("User Array : " +userMoves)
+  $(this).fadeOut("slow").fadeIn("slow");
+  checkWinner(userMoves, simonMoves)
+})
+//////////////////////////////////////////////////////////////////////////////
+
+//evaluates whether or not the player action matches the simon action
+function checkWinner(userMoves, simonMoves){
+  //calls the isEqual function which compares two arrays
+  if (isEqual(userMoves, simonMoves)) {
+    //compares the length of both arrays
+    if (userMoves.length === simonMoves.length) {
+      //calls the emptyArray function which resets the userMoves array
+      emptyArray();
+      console.log("Emptied");
+      //function that adds a number to the simonMoves array
       addNumToArray();
-    });
-
-    //turns off the start button so it only needs to be started once
-    function turnOffStart(){
-      $("#button").off("click");
-    };
-
-    //player choice buttons - function pushes click data to userMoves array
-    $("#red").on("click", function() {
-      console.log("Red works")
-      userMoves.push(colors[0])
-      console.log("Simon Array : "+simonMoves)
-      console.log("User Array : " +userMoves)
-      //animates the button the player clicks on
-      $(this).fadeOut("slow").fadeIn("slow");
-      //calls the checkWinner function which evaluates whether or not the player action matches the simon action
-      checkWinner(userMoves, simonMoves)
-    })
-    $("#blue").on("click", function() {
-      userMoves.push(colors[1])
-      console.log("Simon Array : "+simonMoves)
-      console.log("User Array : " +userMoves)
-      $(this).fadeOut("slow").fadeIn("slow");
-      checkWinner(userMoves, simonMoves)
-    })
-    $("#yellow").on("click", function() {
-      userMoves.push(colors[2])
-      console.log("Simon Array : "+simonMoves)
-      console.log("User Array : " +userMoves)
-      $(this).fadeOut("slow").fadeIn("slow");
-      checkWinner(userMoves, simonMoves)
-    })
-    $("#green").on("click", function() {
-      userMoves.push(colors[3])
-      console.log("Simon Array : "+simonMoves)
-      console.log("User Array : " +userMoves)
-      $(this).fadeOut("slow").fadeIn("slow");
-      checkWinner(userMoves, simonMoves)
-    })
-
-    //evaluates whether or not the player action matches the simon action
-    function checkWinner(userMoves, simonMoves){
-      //calls the isEqual function which compares two arrays
-      if (isEqual(userMoves, simonMoves)) {
-        //compares the length of both arrays
-        if (userMoves.length === simonMoves.length) {
-          //calls the emptyArray function which resets the userMoves array
-          emptyArray();
-          console.log("Emptied");
-          //function that adds a number to the simonMoves array
-          addNumToArray();
-        }
-      } else {
-        alert("THANKS A LOT, LOSER! HUMANITY IS DOOMED!")
-      }
     }
+  } else {
+    alert("THANKS A LOT, LOSER! HUMANITY IS DOOMED!")
+  }
+}
 
-    //function which allows us to compare two arrays
-    function isEqual(array1, array2){
+//function which allows us to compare two arrays
+function isEqual(array1, array2){
 
-      var ret = true;
-      for(var i = 0; i < array1.length; i++){
-        console.log(array1[i], array2[i]);
-        if(array1[i] != array2[i]) {
-          ret = false;
-        }
-      }
-      return ret;
+  var ret = true;
+  for(var i = 0; i < array1.length; i++){
+    console.log(array1[i], array2[i]);
+    if(array1[i] != array2[i]) {
+      ret = false;
     }
-    //resets the userMoves array
-    function emptyArray(array1) {
-      userMoves = [];
-    };
-  })
+  }
+  return ret;
+}
+//resets the userMoves array
+function emptyArray(array1) {
+  userMoves = [];
+};
+})
