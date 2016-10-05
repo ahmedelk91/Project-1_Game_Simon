@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ahmed Elkheshin | Project 1 - Simon </title>
+  <title>Simon Says</title>
   <link rel="stylesheet" href="main.css">
   <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"> </script>
+  <script src="script.js"> </script>
 </head>
 <!--                                -->
 <body background="https://newevolutiondesigns.com/images/freebies/futuristic-city-wallpaper-29.jpg">
@@ -13,79 +15,43 @@
     <h1>SUPREME LEADER AHMED SAYS</h1>
     <h2> Year 3016 AD. Civilization has morphed into a dystopian society where the incredibly handsome and buff yet ruthless leader Ahmed rules the land! If you can follow Ahmed's ridiculous demands, you can reclaim humanity's future. WILL YOU LEAD THE RESISTANCE?! </h2>
   </header>
-  <hr>
-<!--                                -->
-<div class="clearfix">
 
-  <div id="leftInstructions">
-    <p> Instructions <p>
-      <hr>
+  <!--                                -->
+  <div class="clearfix">
+
+    <div id="leftInstructions">
+      <p><u>Instructions</u><p>
         <p id="instructions">
-        <p class="rules"> 1) Press start to initiate the game</p>
-        <p class="rules"> 2) Colored circles will light up in a pattern </p>
-        <p class="rules"> 3) Click the colored circles to match Ahmed's pattern </p>
-        <p class="rules"> 4) If you don't match the pattern, you lose </p>
-        <p class="rules"> 5) If you can match 20 patterns, you free mankind (TBD)</p>
-        <p class="rules"> 6) DON'T LET US DOWN! </p>
+          <p class="rules"> 1) Press start to initiate the game</p>
+          <p class="rules"> 2) Colored circles will light up in a pattern </p>
+          <p class="rules"> 3) Click the colored circles to match Ahmed's pattern </p>
+          <p class="rules"> 4) If you don't match the pattern, you lose </p>
+          <p class="rules"> 5) If you can match 20 patterns, you free mankind (TBD)</p>
+          <p class="rules"> 6) DON'T LET US DOWN! </p>
+        </div>
+        <hr>
+        <div class="row" id="circle">
+          <div class="row">
+            <div class="action col-md-6" id="red"></div>
+            <div class="action col-md-6" id="blue"></div>
+          </div>
+          <div id="button">START</div>
+          <div class="row">
+            <div class="action col-md-6" id="yellow"></div>
+            <div class="action col-md-6" id="green"></div>
+          </div>
+        </div>
+
+        <!-- <aside id="rightScore">
+        <div> 0 </div>
+      </div>
+    </aside> -->
+
   </div>
-      <hr>
-    <div class="board">
-      <div class="action" id="red"> R </div>
-      <div class="action" id="blue">B</div>
-
-      <div id="button">START</div>
-
-      <div class="action" id="yellow">Y</div>
-      <div class="action" id="green">G</div>
-    </div>
-
-  <!-- <aside id="rightScore">
-      <div> 0 </div>
-    </div>
-  </aside> -->
-
-</div>
   <!--                              -->
 
-    <footer> Made with &hearts; by <a href="https://www.linkedin.com/in/ahmed-elkheshin-64258242
-"> Ahmed Elkheshin </a>
-    </footer>
-    <script src="script.js"> </script>
-  </body>
-  </html>
-
-  <!-- User Story
-
-  As a user:
-  -I want to have a title displayed so I know what game I am playing.
-  -I want to have the instructions laid out on the same page so I know how to play.
-  -I want to click a start button so the sequence begins.
-  -I want the game to generate random sequences so I can mimick them.
-  -I want the sequences to increase in speed and difficulty after every input so I can be challenged.
-  -I want to click the circles so that it lights up.
-  -I want my click patterns to be recorded so that another sequence can follow.
-  -I want to see my score after each sequence so I know how I am doing in real time.
-  -I want the game to restart if I mess up a sequence so I can play again.
-  -I want my score to be recorded so I can compare it to previous scores.
-
-  Code Story
-  -The page loads
-  -Title, Instructions, a start button, and 4 circle Divs appear
-  -.on("click", function(evt){
-  *TBD*
-} the start button is pressed, the divs will light up in a sequence.
--The game will start off with begginer level difficulty.
--After the sequence is initiated
-setInterval(change color on random div, every 2 seconds){
-*TBD*
-}
-,prompt(a message will appear saying "Your Turn")
--The player will click the divs that match the the light sequence. .on(click, match sequence)
--If the player is succesful in matching the light sequence, the game will generate another random sequence at an increased speed and complexity. for(i=0,i<10,i++)
--If the player enters an incorrect sequence, the game will end and a score will be recorded.
-if (sequence === comupter sequence) {
-continue sequence with higher frequency and complexity
-} else {
-prompt.("YOU LOSE!")
-});
--The game will reload.
+  <footer> Made with &hearts; by <a href="https://www.linkedin.com/in/ahmed-elkheshin-64258242
+    "> Ahmed Elkheshin </a>
+  </footer>
+</body>
+</html>
