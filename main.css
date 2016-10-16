@@ -42,7 +42,6 @@ header h2 {
   font-size: 120px;
   font-weight: bold;
   color:white;
-  justify-content:center;
 }
 
 #blue {
@@ -51,25 +50,16 @@ header h2 {
   border: 2px solid black;
   border-radius: 0 100% 0 0;
   background-color: blue;
-  text-align:center;
   line-height: 200px;
-  font-size: 120px;
-  font-weight: bold;
-  color:white;
-  justify-content:center;
 }
 
 #yellow {
   width: 300px;
   height: 300px;
   border: 2px solid black;
-  text-align:center;
-  line-height: 200px;
   border-radius: 0 0 0 100%;
+  line-height: 200px;
   background-color: yellow;
-  font-size: 120px;
-  font-weight: bold;
-  color:black;
 }
 
 #green {
@@ -171,14 +161,18 @@ main {
 }
 
 #button {
-  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
   font-family: "Russo One";
-  height: 40px;
+  height: 100px;
   width: 600px;
   border:black solid;
   /*border-radius: %;*/
   background-color:black;
-  margin: auto;
+  /*margin: auto;*/
   text-align:center;
   font-weight: bold;
   /*padding: 5px;*/
@@ -210,10 +204,14 @@ main {
   opacity: 0.8;
 }
 
-#circle {
+.circle {  
   margin:auto;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.row {
+  display:
 }
