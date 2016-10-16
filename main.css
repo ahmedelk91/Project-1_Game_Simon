@@ -76,11 +76,10 @@ header h2 {
 }
 
 footer {
-  display: flex;
-  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
   font-family: "Russo One";
   text-align: center;
-  height: 88px;
   width: 100%;
   color: yellow;
   background-color: black;
@@ -107,18 +106,19 @@ a:hover{
 
 #leftInstructions {
   /*float:left;*/
+  border: 5px yellow solid;
   justify-content: flex-start;
   /*USE display:inline table to get your columns, but ask why other method doesnt work, roughly colcount: 3;*/
   display:inline-table;
   height: 450px;
-  width: 26%;
+  width: 50%;
   /*border: 2px solid black;*/
   margin-top: auto;
   margin-bottom: 20px;
   margin-left: 10px;
   background-color: black;
   opacity: 0.8;
-  border-radius: 10%
+  border-radius: 5%;
 }
 
 
@@ -129,14 +129,6 @@ div p {
   text-align: center;
   font-weight: bold;
 }
-/*#rightScore {
-display:inline-table;
-/*float:right;
-justify-content: flex-end;
-height: 160px;
-width: 24%;
-border: 2px solid black;
-}*/
 
 .clearfix{
   display: inline-flex;
@@ -161,25 +153,22 @@ main {
 }
 
 #button {
-  position: absolute;
+  display: inline;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 25px;
   font-family: "Russo One";
-  height: 100px;
+  height: 50px;
   width: 600px;
   border:black solid;
-  /*border-radius: %;*/
   background-color:black;
-  /*margin: auto;*/
   text-align:center;
   font-weight: bold;
-  /*padding: 5px;*/
   color: yellow;
 }
 
-#button:hover{
+#button:hover {
   opacity: 0.8;
 }
 
@@ -204,14 +193,10 @@ main {
   opacity: 0.8;
 }
 
-.circle {  
+.circle {
   margin:auto;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.row {
-  display:
 }
