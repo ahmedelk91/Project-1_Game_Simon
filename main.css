@@ -8,16 +8,17 @@ body {
 }
 
 header {
+  border: 5px yellow solid;
+  background-color: black;
+  opacity: 0.8;
+  font-size: 50px;
   display:inline-block;
   align-items: center;
   text-align: center;
-  height: 100px;
+  height: 50px;
   width: 100%;
-  /*border: 2px solid black;*/
   color: yellow;
-  /*background-color: black;*/
   font-family: "Russo One";
-  font-size: 30px;
 }
 
 header h1, h2{
@@ -85,11 +86,12 @@ footer {
   background-color: black;
   font-size: 30px;
   opacity: 0.8;
+  border: 5px yellow solid;
 }
 
 a {
-  text-decoration:none;
   color:yellow;
+  text-decoration:none;
 }
 
 a:hover{
@@ -110,12 +112,12 @@ a:hover{
   justify-content: flex-start;
   /*USE display:inline table to get your columns, but ask why other method doesnt work, roughly colcount: 3;*/
   display:inline-table;
-  height: 450px;
+  height: 350px;
   width: 50%;
   /*border: 2px solid black;*/
-  margin-top: auto;
+  margin-top: 150px;
   margin-bottom: 20px;
-  margin-left: 10px;
+  margin-left: 20px;
   background-color: black;
   opacity: 0.8;
   border-radius: 5%;
@@ -173,6 +175,7 @@ main {
 }
 
 #instructions {
+  padding-left: 300px;
   font-size:20px;
   color: yellow;
 }
@@ -183,7 +186,8 @@ main {
 }
 
 .rules {
-  font-size: 18px;
+  padding-left: 20px;
+  font-size: 19px;
   text-align: left;
   color:yellow;
   font-family: "Russo One";
