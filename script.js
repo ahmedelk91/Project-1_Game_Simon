@@ -6,7 +6,6 @@ $(document).ready(function(){
   //userMoves - records player choices
   var userMoves=[]
 
-
   //function that adds a number to the simonMoves array
   function addNumToArray() {
     //randomDivId creates a random variable

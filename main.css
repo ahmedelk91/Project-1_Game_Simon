@@ -99,20 +99,32 @@ a:hover{
 }
 
 #leftInstructions {
-  /*float:left;*/
   border: 5px yellow solid;
-  justify-content: flex-start;
-  /*USE display:inline table to get your columns, but ask why other method doesnt work, roughly colcount: 3;*/
-  display:inline-table;
   height: 350px;
   width: 50%;
-  /*border: 2px solid black;*/
   margin-top: 150px;
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: black;
   opacity: 0.8;
   border-radius: 5%;
+}
+
+#rightScore {
+  border: 5px yellow solid;
+  height: 350px;
+  width: 50%;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  margin-left: 765px;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5%;
+}
+
+#score {
+  text-align: center;
+  font-size: 175px;
 }
 
 
