@@ -38,11 +38,7 @@ header h2 {
   border: 2px solid black;
   border-radius: 100% 0 0;
   background-color: red;
-  text-align:center;
   line-height: 200px;
-  font-size: 120px;
-  font-weight: bold;
-  color:white;
 }
 
 #blue {
@@ -69,11 +65,7 @@ header h2 {
   border: 2px solid black;
   border-radius: 0 0 100% 0;
   background-color: green;
-  text-align:center;
   line-height: 200px;
-  font-size: 120px;
-  font-weight: bold;
-  color:white;
 }
 
 footer {
@@ -157,8 +149,6 @@ main {
 #button {
   display: inline;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 25px;
   font-family: "Russo One";
   height: 50px;
@@ -168,6 +158,14 @@ main {
   text-align:center;
   font-weight: bold;
   color: yellow;
+}
+
+.circle {
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #button:hover {
@@ -195,12 +193,4 @@ main {
 
 .action:hover {
   opacity: 0.8;
-}
-
-.circle {
-  margin:auto;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
