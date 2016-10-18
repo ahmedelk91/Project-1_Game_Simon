@@ -8,16 +8,17 @@ body {
 }
 
 header {
+  border: 5px yellow solid;
+  background-color: black;
+  opacity: 0.8;
+  font-size: 50px;
   display:inline-block;
   align-items: center;
   text-align: center;
-  height: 100px;
+  height: 50px;
   width: 100%;
-  /*border: 2px solid black;*/
   color: yellow;
-  /*background-color: black;*/
   font-family: "Russo One";
-  font-size: 30px;
 }
 
 header h1, h2{
@@ -29,76 +30,60 @@ header h2 {
   font-family: "Russo One";
 }
 
+
 #red {
   display: flex-start;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 100% 0 0;
   background-color: red;
-  text-align:center;
   line-height: 200px;
-  font-size: 120px;
-  font-weight: bold;
-  color:white;
-  justify-content:center;
 }
 
 #blue {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 0 100% 0 0;
   background-color: blue;
-  text-align:center;
   line-height: 200px;
-  font-size: 120px;
-  font-weight: bold;
-  color:white;
-  justify-content:center;
 }
 
 #yellow {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 2px solid black;
-  text-align:center;
+  border-radius: 0 0 0 100%;
   line-height: 200px;
-  border-radius: 50%;
   background-color: yellow;
-  font-size: 120px;
-  font-weight: bold;
-  color:black;
 }
 
 #green {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 2px solid black;
-  border-radius: 50%;
+  border-radius: 0 0 100% 0;
   background-color: green;
-  text-align:center;
   line-height: 200px;
-  font-size: 120px;
-  font-weight: bold;
-  color:white;
 }
 
 footer {
-  display: inline-block;
+  position: fixed;
+  bottom: 0;
   font-family: "Russo One";
   text-align: center;
-  height: 100px;
   width: 100%;
-  border: 2px solid black;
   color: yellow;
   background-color: black;
-  font-size: 24px;
+  font-size: 30px;
+  opacity: 0.8;
+  border: 5px yellow solid;
 }
 
 a {
-  text-decoration:none;
   color:yellow;
+  text-decoration:none;
 }
 
 a:hover{
@@ -114,15 +99,34 @@ a:hover{
 }
 
 #leftInstructions {
-  /*float:left;*/
-  justify-content: flex-start;
-/*USE display:inline table to get your columns, but ask why other method doesnt work, roughly colcount: 3;*/
-  display:inline-table;
-  height: 580px;
-  width: 25%;
-  /*border: 2px solid black;*/
+  border: 5px yellow solid;
+  height: 350px;
+  width: 50%;
+  margin-top: 150px;
   margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5%;
 }
+
+#rightScore {
+  border: 5px yellow solid;
+  height: 350px;
+  width: 50%;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  margin-left: 765px;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5%;
+}
+
+#score {
+  text-align: center;
+  font-size: 175px;
+}
+
 
 div p {
   font-size: 40px;
@@ -131,57 +135,57 @@ div p {
   text-align: center;
   font-weight: bold;
 }
-/*#rightScore {
-  display:inline-table;
-  /*float:right;
-  justify-content: flex-end;
-  height: 160px;
-  width: 24%;
-  border: 2px solid black;
-}*/
 
 .clearfix{
   display: inline-flex;
 }
 
 .clearfix:after {
-     visibility: hidden;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
+  visibility: hidden;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
 
 main {
   padding: 1em;
--moz-column-count: 3;
--moz-column-gap: 1em;
--webkit-column-count: 3;
--webkit-column-gap: 1em;
-column-count: 3;
-column-gap: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
 }
 
 #button {
-    font-size: 20px;
-    font-family: "Russo One";
-    height: 20px;
-    width: 60px;
-    border:black solid;
-    border-radius: 15%;
-    background-color:black;
-    margin: auto;
-    text-align:center;
-    font-weight: bold;
-    padding: 35px;
-    color: yellow;
+  display: inline;
+  top: 50%;
+  font-size: 25px;
+  font-family: "Russo One";
+  height: 50px;
+  width: 600px;
+  border:black solid;
+  background-color:black;
+  text-align:center;
+  font-weight: bold;
+  color: yellow;
 }
 
-#button:hover{
+.circle {
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#button:hover {
   opacity: 0.8;
 }
 
 #instructions {
+  padding-left: 300px;
   font-size:20px;
   color: yellow;
 }
@@ -192,7 +196,8 @@ column-gap: 1em;
 }
 
 .rules {
-  font-size: 18px;
+  padding-left: 20px;
+  font-size: 19px;
   text-align: left;
   color:yellow;
   font-family: "Russo One";
