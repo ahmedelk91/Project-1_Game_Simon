@@ -5,6 +5,15 @@ $(document).ready(function(){
   var simonMoves=[]
   //userMoves - records player choices
   var userMoves=[]
+  //records score
+  var gameScore = 0
+  //records level
+  var level = 0
+  // function addscore(){
+  //   if(userMoves == isEqual){
+  //     score + i++;
+  //   }
+  // }
 
   //function that adds a number to the simonMoves array
   function addNumToArray() {
@@ -20,10 +29,10 @@ $(document).ready(function(){
     simonSays();
   }
 
-  console.log(simonMoves)
+
+
   //function that adds a random value for the simonMoves array and animates these changes
   function simonSays(delay) {
-    // console.log("Length of loop : "+simonMoves.length);
     for (i=0;i<simonMoves.length;i++){
       lightUp( $(simonMoves[i]), i  )
       setTimeout(20 + delay*2000);
@@ -103,7 +112,8 @@ $(document).ready(function(){
     if (isEqual(userMoves, simonMoves)) {
       //compares the length of both arrays
       if (userMoves.length === simonMoves.length) {
-        //calls the emptyArray function which resets the userMoves array
+        //calls the emptyArray function which resets the userMoves array and adds a point to gameScore
+        gameScore = gameScore + 1;
         emptyArray();
         //function that adds a number to the simonMoves array
         addNumToArray();
@@ -127,5 +137,7 @@ $(document).ready(function(){
   //resets the userMoves array
   function emptyArray(array1) {
     userMoves = [];
+    $("#score").text(gameScore)
+    console.log("clicked")
   };
 })
