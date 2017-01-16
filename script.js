@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  //player choices
+  //player choices / buttons
   var colors = ["#red","#blue","#yellow","#green"]
   //simonMoves - empty array recording random sequences Simon spits out; clears out with the emptyArray function
   var simonMoves=[]
@@ -8,12 +8,7 @@ $(document).ready(function(){
   //records score
   var gameScore = 0
   //records level
-  var level = 0
-  // function addscore(){
-  //   if(userMoves == isEqual){
-  //     score + i++;
-  //   }
-  // }
+
 
   //function that adds a number to the simonMoves array
   function addNumToArray() {
@@ -36,18 +31,14 @@ $(document).ready(function(){
     for (i=0;i<simonMoves.length;i++){
       lightUp( $(simonMoves[i]), i  )
       setTimeout(20 + delay*2000);
-      // $(simonMoves[i]).fadeOut("slow").fadeIn("slow");
     }
   }
-  //
-  // function setInterval(thingToAnimate) {
-  // for (i=0;i<simonMoves.length;i++)
 
   function lightUp(thingToAnimate, delay) {
     setTimeout(function() {
       thingToAnimate.fadeOut().fadeIn();
       // find out a way to test whether a color has been passed through the function
-    }, 1500 + (delay*2000));
+    }, 1500 + (delay*1000));
   }
   //setting variable timeouts with loops
   // function flashBetween(thingToAnimate){
@@ -119,7 +110,7 @@ $(document).ready(function(){
         addNumToArray();
       }
     } else {
-      alert("THANKS A LOT, LOSER! HUMANITY IS DOOMED!")
+      alert("YOU LOSE!")
     }
   }
 
