@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simon Says</title>
   <link rel="stylesheet" href="main.css">
   <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"> </script>
   <script src="script.js"> </script>
+  <script>
+  var redBleep = new Audio();
+  redBleep.src = "button-1.wav";
+
+  var blueBleep = new Audio();
+  blueBleep.src = "button-3.wav";
+
+  var yellowBleep = new Audio();
+  yellowBleep.src = "button-4.wav";
+
+  var greenBleep = new Audio();
+  greenBleep.src = "button-09.wav";
+  </script>
 </head>
 <!--                                -->
 <body background="https://newevolutiondesigns.com/images/freebies/futuristic-city-wallpaper-29.jpg">
@@ -27,23 +40,23 @@
           <p class="rules"> 2) The circle's colors will light up in a pattern </p>
           <p class="rules"> 3) Click the colored circles to match the pattern </p>
           <p class="rules"> 4) If you don't match the pattern, you lose </p>
-          <p class="rules">5) Try to beat your high score!</p>
+          <p class="rules"> 5) Try to beat your high score!</p>
         </div>
 
         <div class="circle">
 
           <div class="row">
-            <div class="action col-md-6" id="red"></div>
-            <div class="action col-md-6" id="blue"></div>
+            <a onclick="redBleep.play()"> <div class="action col-md-6" id="red"></div></a>
+            <a onclick="blueBleep.play()"><div class="action col-md-6" id="blue"></div></a>
           </div>
 
           <div class="row">
-            <div class="action col-md-6" id="button"><u>START</u></div>
+            <div class="action col-md-6" id="button">START</div>
           </div>
 
           <div class="row">
-            <div class="action col-md-6" id="yellow"></div>
-            <div class="action col-md-6" id="green"></div>
+            <a onclick="yellowBleep.play()"><div class="action col-md-6" id="yellow"></div></a>
+            <a onclick="greenBleep.play()"><div class="action col-md-6" id="green"></div></a>
           </div>
         </div>
 
