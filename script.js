@@ -8,6 +8,8 @@ $(document).ready(function(){
   //records score
   var gameScore = 0
   //records level
+  // var bleep = new Audio();
+  // bleep.src = "button-1.wav";
 
 
   //function that adds a number to the simonMoves array
@@ -29,7 +31,7 @@ $(document).ready(function(){
   //function that adds a random value for the simonMoves array and animates these changes
   function simonSays(delay) {
     for (i=0;i<simonMoves.length;i++){
-      lightUp( $(simonMoves[i]), i  )
+      lightUp( $(simonMoves[i]), i )
       setTimeout(20 + delay*2000);
     }
   }
