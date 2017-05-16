@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,11 @@
   <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"> </script>
+
+<!-- ******************************************************************************** -->
+
+<!-- SOUND LOGIC -->
+
   <script src="script.js"> </script>
   <script>
   var redBleep = new Audio();
@@ -22,14 +28,19 @@
   greenBleep.src = "button-09.wav";
   </script>
 </head>
-<!--                                -->
-<body background="https://newevolutiondesigns.com/images/freebies/futuristic-city-wallpaper-29.jpg">
+
+<!-- SOUND LOGIC -->
+
+<!-- ******************************************************************************** -->
+<body background="http://i.imgur.com/nKSovQu.png">
 
   <header>
-    <h1>SIMON SAYS 3016 A.D.</h1>
+    <h1>SIMON SAYS</h1>
   </header>
 
-  <!--                                -->
+<!--********************************************************************************-->
+
+<!--  INSTRUCTIONS  -->
 
   <div class="clearfix">
 
@@ -43,10 +54,16 @@
           <p class="rules"> 5) Try to beat your high score!</p>
         </div>
 
+<!-- INSTRUCTIONS -->
+
+<!-- ******************************************************************************* -->
+
+<!-- SIMON SAYS CIRCLE -->
+
         <div class="circle">
 
           <div class="row">
-            <a onclick="redBleep.play()"> <div class="action col-md-6" id="red"></div></a>
+            <a onclick="redBleep.play()"><div class="action col-md-6" id="red"></div></a>
             <a onclick="blueBleep.play()"><div class="action col-md-6" id="blue"></div></a>
           </div>
 
@@ -56,20 +73,31 @@
 
           <div class="row">
             <a onclick="yellowBleep.play()"><div class="action col-md-6" id="yellow"></div></a>
+
             <a onclick="greenBleep.play()"><div class="action col-md-6" id="green"></div></a>
           </div>
         </div>
 
+<!-- SIMON SAYS CIRLE -->
+
+<!-- ******************************************************************************* -->
+
+<!-- SCORE BOX -->
+
         <div id="rightScore">
           <p><u>SCORE</u></p>
-          <p id="score">0</p>
+          <p id="scoreBox">0</p>
         </div>
 
       </div>
 
+<!-- SCORE BOX -->
+
+<!-- ******************************************************************************* -->
+
       <!--                              -->
 
-      <footer> Made with &hearts; by <a href="https://www.linkedin.com/in/ahmed-elkheshin-64258242"> Ahmed Elkheshin </a>
-      </footer>
+      <!-- <footer> Made with &hearts; by <a href="https://www.linkedin.com/in/ahmed-elkheshin-64258242"> Ahmed Elkheshin </a>
+      </footer> -->
     </body>
     </html>
