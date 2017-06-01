@@ -1,19 +1,28 @@
 $(document).ready(function(){
 
+
   // *******************************************************************************************
   // VARIABLES
   // *******************************************************************************************
 
+
   // colored buttons / game choices
   var colors = ["#red", "#blue", "#yellow", "#green"]
-  //simonMoves - empty array recording random sequences Simon spits out; clears out with the emptyArray function
+  // simonMoves - empty array recording random sequences Simon spits out; clears out with the emptyArray function
   var simonMoves=[]
-  //userMoves - records player choices
+  // userMoves - records player choices
   var userMoves=[]
-  //records score
+  // records score
   var gameScore = 0
   // player options
   var playerChoices = ["#red", "#blue", "#yellow", "#green"]
+  // Sound Effects
+  var sounds = {
+    red: new Audio("sounds/button-1.wav"),
+    blue: new Audio("sounds/button-3.wav"),
+    yellow: new Audio("sounds/button-4.wav"),
+    green: new Audio("sounds/button-09.wav")
+  }
 
   // *******************************************************************************************
   // VARIABLES
@@ -33,15 +42,17 @@ $(document).ready(function(){
   function addNumToArray() {
     //randomDivId creates a random variable
     var randomDivId = Math.floor( Math.random() * colors.length );
+
     //pushes the randomDivId to the simonMoves array
     simonMoves.push(colors[randomDivId])
+
     //once the simonMoves array has 1 item, the start button is no longer functional
     if (simonMoves.length == 1){
       turnOffStart();
-    }
-    //calls the simonSays function which animates a number being added to the array; the flash to indicate a move has been made
+    };
     simonSays();
-  }
+  };
+  //calls the simonSays function which animates a number being added to the array; the flash to indicate a move has been made
 
   // **********************************************************************************************************
   // THIS FUNCTION ADDS A RANDOM COLOR TO THE simonMoves ARRAY AND TURNS OFF START BUTTON AFTER FIRST MOVE
@@ -56,7 +67,7 @@ $(document).ready(function(){
   //**********************************************************************************************
   // ANIMATION & SPEED FUNCTION
   //**********************************************************************************************
-
+1
 
   //Speed function that adds a random value for the simonMoves array and animates these changes
   function simonSays(delay) {
@@ -124,9 +135,9 @@ $(document).ready(function(){
   };
 
 
-  //**********************************************************************************************
+  //**************************************************************************************************************
   // BUTTON THAT STARTS GAME
-  //**********************************************************************************************
+  //**************************************************************************************************************
 
 
   // *****************************************************************************************************************************************************************
@@ -177,6 +188,7 @@ $(document).ready(function(){
   // **************************************************************************************************************
   // THIS FUNCTION EVALUATES WHETHER OR NOT THE userMoves array MATCHES THE simonMoves array
   // **************************************************************************************************************
+
 
   //evaluates whether or not the player action matches the simon action
   function checkWinner(userMoves, simonMoves){

@@ -12,14 +12,13 @@ body {
 }
 
 header {
-  border: 5px yellow solid;
   background-color: black;
   opacity: 0.8;
   font-size: 50px;
   display:inline-block;
   align-items: center;
   text-align: center;
-  height: 50px;
+  height: 0px;
   width: 100%;
   color: yellow;
   font-family: "Russo One";
@@ -29,8 +28,8 @@ header h1, h2{
   margin:0 auto;
 }
 
-header h2 {
-  font-size: 19px;
+header h1 {
+  font-size: 210px;
   font-family: "Russo One";
 }
 
@@ -77,19 +76,6 @@ header h2 {
 /*BUTTON COLORS*/
 /*********************************************/
 
-/*footer {
-position: fixed;
-bottom: 0;
-font-family: "Russo One";
-text-align: center;
-width: 100%;
-color: yellow;
-background-color: black;
-font-size: 30px;
-opacity: 0.8;
-border: 5px yellow solid;
-}*/
-
 a {
   color:yellow;
   text-decoration:none;
@@ -102,9 +88,7 @@ a:hover{
 .board {
   display: flex;
   justify-content: center;
-  /*border: 2px solid black;*/
   width: 75%;
-  /*margin-left: 25%;*/
 }
 
 #leftInstructions {
@@ -170,7 +154,7 @@ main {
 #button {
   display: inline;
   top: 50%;
-  font-size: 25px;
+  font-size: 35px;
   font-family: "Russo One";
   height: 50px;
   width: 550px;
