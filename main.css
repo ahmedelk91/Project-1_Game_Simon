@@ -29,7 +29,7 @@ header h1, h2{
 }
 
 header h1 {
-  font-size: 210px;
+  font-size: 155px;
   font-family: "Russo One";
 }
 
@@ -168,7 +168,7 @@ main {
 .circle {
   margin: auto;
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
